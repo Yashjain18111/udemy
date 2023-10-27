@@ -1,0 +1,24 @@
+to remove the containers
+docker compose -f local.yml down
+to build the containers
+docker compose -f local.yml up --build -d --remove-orphans
+to create postgres backup
+docker compose -f local.yml exec postgres backup
+to view postgres backups
+docker compose -f local.yml exec postgres backups
+to restore the POSTGRES_DB
+docker compose -f local.yml exec postgres restore backup_2023_10_17T09_49_16.sql.gz
+#to generate secrete key
+python -c "import secrets; print(secrets.token_urlsafe(38))"
+to remove the containers
+docker compose -f local.yml down
+to build the containers
+docker compose -f local.yml up --build -d --remove-orphans
+to create postgres backup
+docker compose -f local.yml exec postgres backup
+to view postgres backups
+docker compose -f local.yml exec postgres backups
+to restore the POSTGRES_DB
+docker compose -f local.yml exec postgres restore backup_2023_10_17T09_49_16.sql.gz
+#to generate secrete key
+python -c "import secrets; print(secrets.token_urlsafe(38))"
